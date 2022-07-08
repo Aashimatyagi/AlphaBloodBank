@@ -1,0 +1,266 @@
+body {
+  background-color: bisque;
+}
+.main {
+  height: 525px;
+  display: flex;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  margin: auto;
+}
+.header {
+  width: 100%;
+}
+.navbar {
+  background-color: #d03030;
+  display: flex;
+  justify-content: space-evenly;
+}
+.navbar li {
+  float: left;
+  list-style: none;
+  padding: 13px 20px;
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  font-size: 20px;
+  height: 30px;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.navbar a li:hover {
+  background-color: rgb(128, 35, 35);
+  font-size: 22px;
+}
+h1 {
+  text-align: center;
+}
+
+.about {
+  width: 70%;
+  margin: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: 2px solid #f48d8d;
+  border-radius: 10px;
+}
+footer {
+  background-color: #f48d8d;
+  text-align: center;
+  height: 50px;
+  padding: 10px;
+  font-size: large;
+}
+.image {
+  margin: 20px;
+  padding-top: 80px;
+}
+img {
+  height: 250px;
+}
+.profile {
+  height: 150px;
+}
+p {
+  text-align: justify;
+  font-family: "Barlow";
+}
+.fa-instagram {
+  margin: 5px;
+  color: white;
+  text-decoration: none;
+}
+.fa-linkedin {
+  margin: 5px;
+  color: white;
+  text-decoration: none;
+}
+.fa-github {
+  margin: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+.fa-instagram:hover {
+  font-size: 23px;
+}
+.fa-linkedin:hover {
+  font-size: 23px;
+}
+.fa-github:hover {
+  font-size: 23px;
+}
+@media screen and (max-width: 1000px) {
+  .main {
+    width: 90%;
+  }
+  .header {
+    width: 90%;
+  }
+  footer {
+    width: 90%;
+  }
+}
+.by {
+  margin: 100px;
+  width: 50%;
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid #f48d8d;
+  border-radius: 2px;
+  padding: 15px;
+}
+.by_tag {
+  text-align: center;
+  font-size: 30px;
+  color: red;
+}
+.by img {
+  height: 200px;
+}
+a {
+  text-decoration: none;
+}
+
+.by1 {
+  margin: 25px;
+}
+.element {
+  margin: 10px;
+  font-size: 18px;
+}
+fieldset {
+  border: 3px solid #f48d8d;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+}
+.button {
+  display: block;
+  background-color: rgb(128, 35, 35);
+  color: white;
+  padding: 10px;
+  width: 350px;
+  border: none;
+}
+.profile32 .button{
+  margin: 3px;
+}
+form {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.profile2 {
+  display: flex;
+  margin: 15px;
+  /* width: 100%; */
+}
+.profile3 {
+  display: flex;
+  margin: 15px;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+}
+.profile31 table{
+  /* border: 2px solid black; */
+  border-collapse: collapse;
+  font-size: 16px;
+  text-align: center;
+  margin-left: 150px;
+  
+}
+.volunteer{
+  margin:10px ;
+  margin-left: 100px;
+}
+.volunteer h1{margin-left: 150px;}
+.profile31 th{
+  background-color: rgb(128, 35, 35);
+  color: white;
+  font-size:18px ;
+  padding: 10px;
+}
+.profile31 td{
+  padding: 7px;
+  border-bottom: 1px solid rgb(128, 35, 35);
+}
+.profile31 tr:hover{
+  background-color: rgb(128, 35, 35);
+  color: #fff;
+}
+/* .profile31 tr:nth-child(even) {background-color: #d1d0d0;} */
+.profile21 {
+  font-size: 18px;
+  margin: 10px;
+
+  
+}
+.profile1 {
+  text-align: left;
+  margin: 8px;
+}
+.profile23 img{
+  width: 250px;
+  height: 250px;
+}
+.donatePopup {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.formPopup {
+  display: none;
+  position: fixed;
+  left: 45%;
+  top: 5%;
+  transform: translate(-50%, 5%);
+  border: 3px solid #999999;
+  z-index: 9;
+}
+.formContainer {
+  max-width: 350px;
+  padding: 20px;
+  background-color: #fff;
+}
+.formContainer input,
+.formContainer select {
+  width: 80%;
+  padding: 15px;
+  margin: 5px 0 20px 0;
+  border: none;
+  background: #eee;
+}
+.formContainer input:focus,
+.formContainer select:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.formContainer .btn {
+  padding: 12px 20px;
+  border: none;
+  background-color: rgb(128, 35, 35);
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.formContainer .cancel {
+  background-color: rgb(128, 35, 35) 0000;
+}
+#locationagree {
+  margin-left: auto;
+  margin-right: auto;
+  height: fit-content;
+  margin-top: 10px;
+}

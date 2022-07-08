@@ -1,0 +1,29 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="profile31 volunteer">
+  <h1>Volunteers</h1>
+  <table>
+    <tr>
+      <th>VID</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>DOB</th>
+      <th>Gender</th>
+      <th>Email</th>
+      <th>address</th>
+    </tr>
+    {% for volunteer in query %}
+    <tr>
+      <td>{{volunteer.vid}}</td>
+      <td>{{volunteer.name}}</td>
+      <td>{{volunteer.phone}}</td>
+      <td>{{volunteer.dob}}</td>
+      <td>{{volunteer.gender}}</td>
+      <td>{{volunteer.email}}</td>
+      <td>{{volunteer.address}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+
+{% endblock %}

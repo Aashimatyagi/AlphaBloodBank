@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+    
+<form action="\donorlogin" method="POST">
+    <fieldset>
+      <legend><h1>Login</h1></legend>
+      <div class="by1">
+        <label for="userid" class="element">User ID:</label>
+        <input type="text" class="element" name="userid"/>
+        <br />
+        <label for="passwprd" class="element">Password</label>
+        <input type="password" name="passw" class="element" placeholder="DOB as YYYY-MM-DD"/>
+        <input type="submit" class="element button" value="LOGIN" >
+        </div>
+    </fieldset>
+  </form>
+  
+
+{% endblock %}

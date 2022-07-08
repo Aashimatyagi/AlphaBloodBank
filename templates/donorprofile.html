@@ -1,0 +1,84 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="profile_main">
+  <h1 class="profile1">Welcome {{current_user.name}}</h1>
+  <div class="profile2">
+    <div class="profile21">
+      <b>BloodType: </b>&nbsp {{current_user.bloodtype}}
+      <br />
+      <br />
+      <b> Phone: </b>&nbsp {{current_user.phone}} <br /><br />
+      <b>Date of Birth: </b>&nbsp {{current_user.dob}}
+    </div>
+    <div class="profile21">
+      <b>Email: </b>&nbsp {{current_user.email}}
+      <br />
+      <br />
+      <b>Address: </b>&nbsp {{current_user.address}}, {{current_user.state}}
+    </div>
+    <div class="profile23">
+      <img
+        src="{{ url_for('static', filename='images/'+current_user.profilepic)}}"
+      />
+    </div>
+  </div>
+  <div class="profile3">
+    <div class="profile31">
+      <table>
+        <tr>
+          <th>TID</th>
+          <th>Date</th>
+          <th>Unit</th>
+        </tr>
+        {% for donation in query %}
+        <tr>
+          <td>{{donation.did}}</td>
+          <td>{{donation.date}}</td>
+          <td>{{donation.unit}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    <div class="profile32">
+      <button class="button" onclick="openForm()">
+        <strong>Donate</strong>
+      </button>
+
+      <div class="donatePopup">
+        <div class="formPopup" id="popupForm">
+          <form action="/donorprofile" class="formContainer" method="post">
+            <h2>Blood Donation</h2>
+            <label for="unit">
+              <strong>Units</strong>
+            </label>
+            <input type="text" id="units" name="unit" required />
+            <label for="incharge">
+              <strong>Incharge/ OnDuty Volunteer</strong>
+            </label>
+            <select id="incharge" name="incharge">
+              {% for volunteer in query2 %}
+              <option value="{{ volunteer.name }}">{{ volunteer.name }}</option>
+              {% endfor %}
+            </select>
+            <input type="date" name="date" />
+            <br />
+            <button type="submit" class="btn">Donate</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">
+              Close
+            </button>
+          </form>
+        </div>
+      </div>
+      <a href="/edit/{{current_user.id}}"
+        ><button class="button" >Edit</button></a
+      >
+      <a href="/delete/{{current_user.id}}"
+        ><button class="button">Delete</button></a
+      >
+      <form action="/logout">
+        <button class="button">LogOut</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
